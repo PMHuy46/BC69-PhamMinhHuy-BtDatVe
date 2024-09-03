@@ -13,9 +13,11 @@ export const { reducer: btDatVeReducer, actions: btDatVeActions } = createSlice(
         chooseToCheck: (state, { payload: { info, hang } }) => {
             let index = state.user.findIndex(item => item.soGhe === info.soGhe)
             let check = state.data.findIndex(item2 => item2.hang == hang)
+            // console.log(check)
             let check2 = state.data[check].danhSachGhe.findIndex(item3 => item3.soGhe == info.soGhe)
+            // console.log(check2)
             state.data[check].danhSachGhe[check2] = { ...info, check: true }
-            console.log(state.data[check].danhSachGhe[check2])
+            // console.log(state.data[check].danhSachGhe[check2])
             console.log(index)
             if (index === -1) {
                 state.user.push({ ...info, hang: hang })

@@ -28,7 +28,7 @@ export const ListLocation = () => {
 
           return (
             <div key={item.hang}>
-              <Render hangGhe={item} />
+              <Render hangGhe={item.hang} />
             </div>
           );
         }
