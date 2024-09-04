@@ -8,7 +8,6 @@ export const Render = (props) => {
   const { data } = useSelector((state) => state.btDatVeReducer);
   const dispatch = useDispatch();
   const index = data.findIndex((item) => item.hang == hangGhe);
-  console.log(data[index].danhSachGhe)
   // const { user } = useSelector((state) => state.btDatVeReducer);
   return (
     <div className="flex gap-5 items-center h-[60px]">
@@ -24,7 +23,7 @@ export const Render = (props) => {
               {
                 "bg-yellow-400 text-yellow-400": item.daDat,
                 "bg-green-600": item.check,
-                'bg-white ':item.check==undefined
+                'bg-white ':!item.check
               }
             )}
             style={{ cursor: "pointer" }}

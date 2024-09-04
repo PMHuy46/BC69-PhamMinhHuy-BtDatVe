@@ -41,7 +41,7 @@ export const DanhSachChon = () => {
                   <td className="border-2 border-white px-3 h-[30px] text-yellow-400">{item.soGhe}</td>
                   <td className="border-2 border-white px-3 text-yellow-400">{item.gia}</td>
                   <td className="border-2 border-white text-red px-3 text-red-700 " style={{cursor:'pointer'}} onClick={()=>{
-                    dispatch(btDatVeActions.deleteChoose(item.soGhe))
+                    dispatch(btDatVeActions.deleteChoose(item))
                   }}>X</td>
                 </tr>
               );
